@@ -1,0 +1,61 @@
+/* 状态徽章 */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+}
+
+.status-success {
+  background: var(--success-50);
+  color: var(--success-700);
+  border: 1px solid #bbf7d0;
+}
+
+.status-processing {
+  background: var(--warning-50);
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.status-failed {
+  background: var(--error-50);
+  color: var(--error-600);
+  border: 1px solid #fecaca;
+}
+
+.status-pending {
+  background: var(--gray-100);
+  color: var(--gray-600);
+  border: 1px solid var(--gray-200);
+}
+
+.status-recycled {
+  background: var(--gray-100);
+  color: var(--gray-500);
+  border: 1px solid var(--gray-200);
+}
+
+.status-draft {
+  background: var(--info-50);
+  color: var(--info-600);
+  border: 1px solid #bfdbfe;
+}
+
+/* 进行中闪烁点 */
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

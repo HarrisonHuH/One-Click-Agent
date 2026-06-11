@@ -1,0 +1,66 @@
+/* 步骤进度条 */
+.step-progress {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gray-200);
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.step-item.active .step-number {
+  background: var(--primary-600);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+.step-item.completed .step-number {
+  background: var(--primary-600);
+  color: #ffffff;
+}
+
+.step-label {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.step-item.active .step-label,
+.step-item.completed .step-label {
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+}
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--gray-200);
+  margin: 0 16px;
+  position: relative;
+  border-radius: 1px;
+}
+
+.step-line.completed {
+  background: var(--primary-600);
+}
