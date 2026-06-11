@@ -1,102 +1,216 @@
-# ===========================
-# Python 相关
-# ===========================
-__pycache__/
-*.py[cod]
-*.so
-.Python
-env/
+# ==================== Python (Backend) ====================
+# 虚拟环境
 venv/
+env/
+.venv/
 ENV/
 env.bak/
 venv.bak/
-*.egg-info/
-dist/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 编译/打包
 build/
+dist/
+*.egg-info/
 *.egg
+.eggs/
+develop-eggs/
+downloads/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-log.txt
+pip-delete-this-directory.txt
 
-# ===========================
-# 前端相关
-# ===========================
-node_modules/
-frontend/dist/
-frontend/build/
-frontend/.vite/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# 类型检查
+.mypy_cache/
+.pyre/
+.pytype/
 
-# ===========================
-# 环境变量 & 敏感配置
-# ===========================
-.env
-.env.local
-.env.*.local
-*.pem
-*.key
-*.crt
-
-# ===========================
-# IDE 和编辑器
-# ===========================
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-Thumbs.db
-
-# ===========================
-# 日志和临时文件
-# ===========================
-*.log
-*.pid
-*.seed
-*.pid.lock
-logs/
-tmp/
-temp/
-backend/app/__pycache__/
-
-# ===========================
-# 测试和覆盖率
-# ===========================
-.pytest_cache/
+# 测试覆盖率
 .coverage
+.coverage.*
+.cache
+coverage.xml
 htmlcov/
 .tox/
-.mypy_cache/
-.ruff_cache/
+.nox/
+.pytest_cache/
 
-# ===========================
-# 媒体文件（按需调整）
-# ===========================
-# 如果生成视频文件很大，建议不上传
-backend/uploads/
-backend/media/
-*.mp4
-*.mov
-*.avi
-*.wav
-*.mp3
-
-# ===========================
-# Docker 相关
-# ===========================
-*.pid
-docker-compose.override.yml
-
-# ===========================
-# Celery 相关
-# ===========================
+# Celery
 celerybeat-schedule
 celerybeat.pid
+*.pid
 
-# ===========================
-# 数据库文件
-# ===========================
+# 数据库
 *.db
 *.sqlite
 *.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+
+# 日志
+*.log
+logs/
+log/
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==================== Node.js (Frontend) ====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 构建产物
+dist/
+dist-ssr/
+build/
+*.local
+
+# 缓存
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+.turbo/
+
+# ==================== 环境变量 ====================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+!.env.example
+
+# ==================== IDE / 编辑器 ====================
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (PyCharm, WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+.vim/
+*.swp
+*.swo
+
+# ==================== 操作系统 ====================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# ==================== 项目特定 ====================
+# 上传/媒体文件
+uploads/
+media/
+output/
+outputs/
+storage/
+tmp/
+temp/
+
+# 生成内容
+generated/
+videos/
+images/
+thumbnails/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+
+# Redis / 队列
+dump.rdb
+*.rdb
+redis-data/
+celery_results/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# 文档构建
+docs/_build/
+site/
+.mkdocs/
+
+# ==================== 杂项 ====================
+# 密钥/证书
+*.pem
+*.key
+*.crt
+*.csr
+secrets/
+credentials/
+
+# 备份
+backups/
+*.sql.gz
+
+# 报告
+report.html
+report.xml
